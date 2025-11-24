@@ -1,0 +1,122 @@
+/* General */
+body {
+  font-family: 'Georgia', serif;
+  color: #f8f8f8;
+  background: #504d4d;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #111 !important;
+}
+.navbar-brand {
+  color: #efb909 !important;  /* Gold */
+  font-weight: bold;
+  font-size: 28px;
+  letter-spacing: 2px;
+}
+.nav-link {
+  color: #f8f8f8 !important;
+  font-size: 16px;
+}
+.nav-link:hover {
+  color: #a50000 !important; /* Cartier red */
+}
+
+/* Hero Carousel */
+.hero-text {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  color: #c68888;
+  max-width: 450px;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.8);
+}
+.hero-text h2 {
+  color: #ffc711; /* Gold headline */
+  font-size: 36px;
+}
+
+/* Section Titles */
+.section-title {
+  text-align: center;
+  margin: 50px 0 30px;
+  font-weight: bold;
+  color: #fcc40a; /* Gold */
+  text-transform: uppercase;
+}
+
+/* Categories */
+#Shop p {
+  color:gold;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Warranty Section */
+.bg-dark h3 {
+  color: #eec335;
+}
+.bg-dark ul {
+  list-style: none;
+  padding-left: 0;
+}
+.bg-dark ul li {
+  margin-bottom: 8px;
+  color: #b03232;
+}
+
+/* Testimonials */
+.card {
+  border: 1px solid #eabe30;
+  border-radius: 10px;
+  background: #1a1a1a;
+  color: #f9bdbd;
+}
+.card strong {
+  display: block;
+  margin-top: 10px;
+  color: #a50000;
+}
+
+/* Contact Form */
+form input, 
+form textarea {
+  background: #222;
+  border: 1px solid #d4af37;
+  color: #f8f8f8;
+}
+form input::placeholder,
+form textarea::placeholder {
+  color: #bbb;
+}
+form button {
+  background: #755b07;
+  color: #c19393;
+  font-weight: bold;
+}
+form button:hover {
+  background: #a50000;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  background: #f4eeee;
+  color: #ccc;
+  padding: 40px 0;
+}
+footer h5 {
+  color: #d4af37;
+  margin-bottom: 15px;
+}
+footer a {
+  color: #916161;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #ff0a0a;
+}
+footer hr {
+  border-top: 1px solid #d4af37;
+}

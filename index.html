@@ -1,0 +1,1901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartier | Luxury Watches & Jewelry</title>
+  <meta name="description" content="Discover Cartier's luxury ladies watches, jewelry and accessories. Explore iconic collections like Panthère, Tank, and Ballon Bleu.">
+  
+  <!-- Meta Keywords -->
+  <meta name="keywords" content="cartier b, cartier jewelry, cartier near me, cartier tank louis cartier, cartier tank must watch, cartier santos mens watch, cartier rodeo drive, cartier jp, dhgate cartier watch, cartier fifth avenue, cartier mansion, santos de cartier skeleton watch, louis cartier, cartier louis, cartier south coast plaza, cartier watch dhgate, cartier tiara, cartier dc, maria felix jewelry, cartier founder, cartier jaguar, dhgate cartier, cartier 20 61323, louis françois cartier, muhammad ali cartier tank, cartier jump hour, cartier care, santos de cartier skeleton, cartier la panthère eau de parfum, cartier europe">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cartier-red: #8b1d1d;
+      --cartier-gold: #c9a96e;
+      --cartier-gray: #2c2c2c;
+      --light-gray: #f5f5f5;
+      --text-light: #e0e0e0;
+    }
+    
+    body { 
+      font-family: 'Nunito', sans-serif; 
+      background-color: #000000;
+      color: #e0e0e0;
+      overflow-x: hidden;
+      font-weight: 400;
+      background-image: url('pic1 (4).jpeg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+    }
+    
+    /* Overlay for better readability */
+    .content-overlay {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .content-overlay::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: -1;
+    }
+    
+    /* Headings - Playfair Display */
+    h1, h2, h3, h4, h5, h6,
+    .hero-title,
+    .section-title,
+    .card-title,
+    .cart-title,
+    .navbar-brand,
+    footer h5 {
+      font-family: 'Playfair Display', serif;
+    }
+    
+    /* Navbar styling - Elegant */
+    .navbar {
+      background-color: rgba(20, 20, 20, 0.9) !important;
+      backdrop-filter: blur(10px);
+      transition: all 0.4s ease;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .navbar.scrolled {
+      padding: 15px 0;
+      box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    .navbar-brand { 
+      color: var(--cartier-red) !important; 
+      font-weight: 700; 
+      font-size: 28px; 
+      letter-spacing: 2px; 
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    .navbar-brand::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--cartier-gold);
+      transition: width 0.5s ease;
+    }
+    
+    .navbar-brand:hover::after {
+      width: 100%;
+    }
+    
+    .nav-link { 
+      color: #e0e0e0 !important; 
+      font-weight: 600;
+      letter-spacing: 1px;
+      position: relative;
+      transition: all 0.3s ease;
+      margin: 0 10px;
+      padding: 8px 0 !important;
+      font-size: 16px;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--cartier-red), var(--cartier-gold));
+      transition: width 0.5s ease;
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    .nav-link:hover { 
+      color: #ffffff !important; 
+      transform: translateY(-2px);
+    }
+    
+    /* Cart Icon */
+    .cart-icon-container {
+      position: relative;
+      display: inline-block;
+      margin-left: 15px;
+    }
+    .text-danger {
+    --bs-text-opacity: 1;
+    color: rgb(243 205 92 / 71%) !important;
+}
+    .cart-badge {
+      background: var(--cartier-red);
+      color: white;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      animation: pulse 2s infinite;
+    }
+    
+    /* Hero Section with Mixed Media */
+    .hero-section {
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .media-slider {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .media-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+    }
+    
+    .media-slide.active {
+      opacity: 1;
+    }
+    
+    .hero-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%);
+      z-index: 1;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding-left: 10%;
+      max-width: 600px;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+      transform: translateY(30px);
+      opacity: 0;
+      transition: all 1s ease;
+    }
+    
+    .hero-content.active {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    
+    .hero-title {
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      letter-spacing: 2px;
+      background: linear-gradient(90deg, #ffffff, var(--cartier-gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: titleGlow 3s ease-in-out infinite alternate;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.3rem;
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+      opacity: 0.9;
+      font-weight: 400;
+    }
+    
+    .hero-btn {
+      display: inline-block;
+      padding: 15px 40px;
+      background: transparent;
+      color: white;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      text-decoration: none;
+      font-size: 16px;
+      letter-spacing: 2px;
+      transition: all 0.5s ease;
+      position: relative;
+      overflow: hidden;
+      border-radius: 30px;
+      font-weight: 600;
+    }
+    
+    .hero-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.7s ease;
+    }
+    
+    .hero-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: white;
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    .hero-btn:hover::before {
+      left: 100%;
+    }
+    
+    .slider-nav {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 3;
+    }
+    
+    .slider-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .slider-dot.active {
+      background: white;
+      transform: scale(1.2);
+    }
+    
+    .slider-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 3;
+      transition: all 0.3s ease;
+    }
+    
+    .slider-arrow:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+    
+    .slider-arrow.prev {
+      left: 30px;
+    }
+    
+    .slider-arrow.next {
+      right: 30px;
+    }
+    
+    /* Section styling */
+    .section-title { 
+      text-align: center; 
+      margin: 100px 0 60px; 
+      font-weight: 700; 
+      color: #ffffff;
+      position: relative;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+    }
+    
+    .section-title.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--cartier-red), var(--cartier-gold));
+      margin: 20px auto;
+      transform: scaleX(0);
+      transition: transform 0.8s ease 0.3s;
+    }
+    
+    .section-title.visible::after {
+      transform: scaleX(1);
+    }
+    
+    .container.my-5 {
+      background: linear-gradient(135deg, rgba(26,26,26,0.8) 0%, rgba(42,42,42,0.6) 100%);
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Cards styling - Elegant */
+    .card {
+      background: linear-gradient(135deg, rgba(42,42,42,0.8) 0%, rgba(58,58,58,0.6) 100%);
+      color: #e0e0e0;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.5s ease;
+      overflow: hidden;
+      height: 100%;
+      opacity: 0;
+      transform: translateY(30px);
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+    }
+    
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .card:hover {
+      transform: translateY(-15px) scale(1.02);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5) !important;
+      border-color: rgba(201, 169, 110, 0.3);
+    }
+    
+    .card-title {
+      font-weight: 600;
+      font-size: 1.3rem;
+    }
+    
+    .card-text {
+      font-weight: 400;
+    }
+    
+    .card-img-top {
+      transition: transform 1s ease;
+      height: 480px;
+      object-fit: cover;
+      border-radius: 15px 15px 0 0;
+    }
+    
+    .card:hover .card-img-top {
+      transform: scale(1.1);
+    }
+    
+    .card-body {
+      padding: 25px;
+    }
+    
+    /* Add to Cart Button */
+    .add-to-cart-btn {
+      background: linear-gradient(135deg, var(--cartier-red), #a52a2a);
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 30px;
+      transition: all 0.5s ease;
+      font-weight: 600;
+      width: 100%;
+      margin-top: 15px;
+      letter-spacing: 1px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .add-to-cart-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.7s ease;
+    }
+    
+    .add-to-cart-btn:hover {
+      background: linear-gradient(135deg, #a52a2a, var(--cartier-red));
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(139, 29, 29, 0.4);
+    }
+    
+    .add-to-cart-btn:hover::before {
+      left: 100%;
+    }
+    
+    /* Product Price */
+    .product-price {
+      font-size: 1.4rem;
+      color: var(--cartier-gold);
+      font-weight: 700;
+      margin: 15px 0;
+      text-shadow: 0 0 10px rgba(201, 169, 110, 0.3);
+    }
+    
+    /* Quantity Controls */
+    .quantity-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    
+    .quantity-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(42, 42, 42, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: var(--text-light);
+      transition: all 0.3s ease;
+    }
+    
+    .quantity-btn:hover {
+      background: var(--cartier-red);
+      transform: scale(1.1);
+    }
+    
+    .quantity-input {
+      width: 60px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      margin: 0 15px;
+      padding: 8px;
+      background: rgba(26, 26, 26, 0.8);
+      color: white;
+      font-weight: 600;
+    }
+    
+    /* Categories */
+    .category-img {
+      transition: all 0.7s ease;
+      height: 280px;
+      object-fit: cover;
+      opacity: 0;
+      transform: translateY(30px);
+      border-radius: 15px;
+      filter: brightness(0.8);
+    }
+    
+    .category-img.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .category-img:hover {
+      transform: scale(1.05) rotate(1deg);
+      filter: brightness(1);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+    
+    /* Shopping Cart Sidebar */
+    .cart-sidebar {
+      position: fixed;
+      top: 0;
+      right: -450px;
+      width: 420px;
+      height: 100vh;
+      background: linear-gradient(135deg, rgba(26,26,26,0.95) 0%, rgba(42,42,42,0.9) 100%);
+      box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
+      z-index: 1050;
+      transition: right 0.4s ease;
+      padding: 25px;
+      overflow-y: auto;
+      color: #e0e0e0;
+      backdrop-filter: blur(15px);
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .cart-sidebar.open {
+      right: 0;
+    }
+    
+    .cart-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 1040;
+      display: none;
+      backdrop-filter: blur(5px);
+    }
+    
+    .cart-overlay.active {
+      display: block;
+    }
+    
+    .cart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .cart-title {
+      color: white;
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    
+    .cart-item {
+      display: flex;
+      align-items: center;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .cart-item:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    
+    .cart-item-img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-right: 20px;
+    }
+    
+    .cart-item-details {
+      flex: 1;
+    }
+    
+    .cart-item-title {
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: white;
+    }
+    
+    .cart-item-price {
+      color: var(--cartier-gold);
+      font-weight: 700;
+    }
+    
+    .cart-item-quantity {
+      display: flex;
+      align-items: center;
+      margin-top: 8px;
+    }
+    
+    .cart-quantity-btn {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: rgba(42, 42, 42, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-light);
+      transition: all 0.3s ease;
+    }
+    
+    .cart-quantity-btn:hover {
+      background: var(--cartier-red);
+      transform: scale(1.1);
+    }
+    
+    .cart-quantity-input {
+      width: 45px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+      margin: 0 8px;
+      padding: 5px;
+      background: rgba(26, 26, 26, 0.8);
+      color: white;
+    }
+    
+    .remove-item {
+      background: none;
+      border: none;
+      color: #ff6b6b;
+      cursor: pointer;
+      font-size: 1.3rem;
+      margin-left: 15px;
+      transition: all 0.3s ease;
+    }
+    
+    .remove-item:hover {
+      color: #ff5252;
+      transform: scale(1.2) rotate(90deg);
+    }
+    
+    .cart-total {
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin: 25px 0;
+      text-align: center;
+      color: white;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .checkout-btn {
+      width: 100%;
+      padding: 15px;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--cartier-red), #a52a2a);
+      border: none;
+      transition: all 0.5s ease;
+      border-radius: 30px;
+      letter-spacing: 1px;
+    }
+    
+    .checkout-btn:hover {
+      background: linear-gradient(135deg, #a52a2a, var(--cartier-red));
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(139, 29, 29, 0.4);
+    }
+    
+    .empty-cart {
+      text-align: center;
+      padding: 60px 0;
+      color: var(--text-light);
+    }
+    
+    .empty-cart i {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      color: rgba(255, 255, 255, 0.2);
+    }
+    
+    /* Warranty Section */
+    .warranty-section {
+      background: linear-gradient(135deg, rgba(26,26,26,0.9) 0%, rgba(42,42,42,0.7) 100%);
+      padding: 100px 0;
+      border-radius: 20px;
+      margin: 80px 0;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .warranty-section h3 {
+      color: var(--cartier-gold);
+      margin-bottom: 25px;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    
+    .warranty-section p {
+      font-weight: 400;
+    }
+    
+    .warranty-section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    .warranty-section li {
+      margin-bottom: 15px;
+      position: relative;
+      padding-left: 35px;
+      font-size: 1.1rem;
+      font-weight: 400;
+    }
+    
+    .warranty-section li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--cartier-gold);
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    
+    /* Testimonials */
+    .testimonial-card {
+      transition: all 0.7s ease;
+      opacity: 0;
+      transform: translateY(30px);
+      background: linear-gradient(135deg, rgba(42,42,42,0.8) 0%, rgba(58,58,58,0.6) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+    }
+    
+    .testimonial-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .testimonial-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      border-color: rgba(201, 169, 110, 0.3);
+    }
+    
+    /* Contact Section */
+    .contact-section {
+      background: linear-gradient(135deg, rgba(26,26,26,0.9) 0%, rgba(42,42,42,0.7) 100%);
+      padding: 100px 0;
+      border-radius: 20px;
+      margin: 80px 0;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .form-control {
+      background: rgba(42, 42, 42, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #e0e0e0;
+      transition: all 0.3s ease;
+      border-radius: 10px;
+      padding: 12px 15px;
+      font-weight: 400;
+    }
+    
+    .form-control:focus {
+      background: rgba(42, 42, 42, 0.9);
+      border-color: var(--cartier-red);
+      color: #e0e0e0;
+      box-shadow: 0 0 0 0.25rem rgba(139, 29, 29, 0.25);
+      transform: translateY(-2px);
+    }
+    
+    .form-control::placeholder {
+      color: #888;
+    }
+    
+    .btn-light {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      transition: all 0.5s ease;
+      border-radius: 30px;
+      padding: 12px 30px;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    
+    .btn-light:hover {
+      background: linear-gradient(135deg, var(--cartier-red), #a52a2a);
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(139, 29, 29, 0.3);
+    }
+    
+    /* Footer */
+    footer { 
+      background: linear-gradient(135deg, rgba(20,20,20,0.95) 0%, rgba(42,42,42,0.9) 100%); 
+      color: #ccc; 
+      padding: 80px 0 40px; 
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    footer h5 { 
+      color: #fff; 
+      margin-bottom: 25px;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+    
+    footer p {
+      font-weight: 400;
+    }
+    
+    footer a { 
+      color: #ccc; 
+      text-decoration: none; 
+      transition: color 0.3s ease;
+      font-weight: 400;
+    }
+    
+    footer a:hover { 
+      color: var(--cartier-red); 
+      transform: translateX(5px);
+    }
+    
+    .social-icons a {
+      display: inline-flex;
+      width: 45px;
+      height: 45px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      text-align: center;
+      line-height: 45px;
+      margin-right: 15px;
+      transition: all 0.5s ease;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .social-icons a:hover {
+      background: var(--cartier-red);
+      transform: translateY(-5px) scale(1.1);
+      box-shadow: 0 10px 20px rgba(139, 29, 29, 0.3);
+    }
+    
+    /* Progress Bar */
+    .progress-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: transparent;
+      z-index: 1000;
+    }
+    
+    .progress-bar {
+      height: 4px;
+      background: linear-gradient(90deg, var(--cartier-red), var(--cartier-gold));
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+    
+    /* Custom Alert */
+    .custom-alert {
+      position: fixed;
+      top: 100px;
+      right: 20px;
+      z-index: 9999;
+      min-width: 350px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      display: none;
+      animation: slideInRight 0.5s ease;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+    }
+    
+    @keyframes slideInRight {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    
+    .alert-success {
+      background: linear-gradient(135deg, rgba(42,42,42,0.95) 0%, rgba(58,58,58,0.9) 100%);
+      color: #e0e0e0;
+      border-left: 5px solid var(--cartier-red);
+    }
+    
+    .alert-info {
+      background: linear-gradient(135deg, rgba(42,42,42,0.95) 0%, rgba(58,58,58,0.9) 100%);
+      color: #e0e0e0;
+      border-left: 5px solid var(--cartier-gold);
+    }
+    
+    .alert-warning {
+      background: linear-gradient(135deg, rgba(42,42,42,0.95) 0%, rgba(58,58,58,0.9) 100%);
+      color: #e0e0e0;
+      border-left: 5px solid #ffc107;
+    }
+    
+    .alert-close {
+      background: none;
+      border: none;
+      font-size: 1.3rem;
+      color: inherit;
+      opacity: 0.7;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .alert-close:hover {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    
+    /* Star Animation */
+    .fa-star {
+      transition: transform 0.3s ease;
+    }
+    
+    .card:hover .fa-star {
+      animation: pulse 1s infinite, glow 2s infinite alternate;
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+    
+    @keyframes glow {
+      from { text-shadow: 0 0 5px rgba(255, 215, 0, 0.5); }
+      to { text-shadow: 0 0 20px rgba(255, 215, 0, 0.8); }
+    }
+    
+    /* Floating Animation */
+    .floating {
+      animation: floating 3s ease-in-out infinite;
+    }
+    
+    @keyframes floating {
+      0% { transform: translate(0, 0px); }
+      50% { transform: translate(0, 15px); }
+      100% { transform: translate(0, -0px); }
+    }
+    
+    /* Title Glow Animation */
+    @keyframes titleGlow {
+      0% { 
+        background: linear-gradient(90deg, #ffffff, var(--cartier-gold));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      100% { 
+        background: linear-gradient(90deg, var(--cartier-gold), #ffffff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    
+    /* Pulse Animation */
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      
+      .section-title {
+        font-size: 2rem;
+      }
+      
+      .cart-sidebar {
+        width: 100%;
+        right: -100%;
+      }
+      
+      .container.my-5 {
+        padding: 30px 20px;
+      }
+      
+      .slider-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+      }
+      
+      .slider-arrow.prev {
+        left: 15px;
+      }
+      
+      .slider-arrow.next {
+        right: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Custom Alert Container -->
+<div id="alertContainer"></div>
+
+<!-- Scroll Progress Bar -->
+<div class="progress-container">
+  <div class="progress-bar" id="progressBar"></div>
+</div>
+
+<!-- Shopping Cart Sidebar -->
+<div class="cart-overlay" id="cart-overlay"></div>
+<div class="cart-sidebar" id="cart-sidebar">
+  <div class="cart-header">
+    <h4 class="cart-title">Your Cart</h4>
+    <button class="btn-close btn-close-white" id="close-cart"></button>
+  </div>
+  
+  <div id="cart-items">
+    <!-- Cart items will be dynamically added here -->
+    <div class="empty-cart">
+      <i class="fas fa-shopping-cart"></i>
+      <p>Your cart is empty</p>
+    </div>
+  </div>
+  
+  <div class="cart-total" id="cart-total" style="display: none;">
+    Total: $<span id="total-amount">0.00</span>
+  </div>
+  
+  <button class="btn checkout-btn" id="checkout-btn" style="display: none;">Proceed to Checkout</button>
+  <button class="btn btn-outline-light w-100 mt-3" id="continue-shopping" style="display: none;">Continue Shopping</button>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top" id="navbar">
+  <div class="container">
+    <a class="navbar-brand" href="#">CARTIER</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#cartierNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="cartierNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a href="#" class="nav-link" id="homeLink">Home</a></li>
+        <li class="nav-item"><a href="#Shop" class="nav-link">Collections</a></li>
+        <li class="nav-item"><a href="#About" class="nav-link">Heritage</a></li>
+        <li class="nav-item"><a href="#Contact" class="nav-link">Contact</a></li>
+        <li class="nav-item">
+          <div class="cart-icon-container">
+            <button class="btn btn-outline-light" id="cart-toggle">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-badge" id="cart-count">0</span>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section with Mixed Media -->
+<section class="hero-section" id="home">
+  <div class="media-slider">
+    <!-- First Image Slide (replaces video) -->
+    <div class="media-slide active">
+      <img src="pic1 (5).jpeg" class="hero-image" alt="Cartier Luxury Watch">
+    </div>
+    
+    <!-- Second Image Slide -->
+    <div class="media-slide">
+      <img src="pic1 (19).jpeg" class="hero-image" alt="Cartier Luxury Watch">
+    </div>
+    
+    <!-- Third Image Slide -->
+    <div class="media-slide">
+      <img src="pic1 (20).jpeg" class="hero-image" alt="Cartier Luxury Jewelry">
+    </div>
+  </div>
+  
+  <div class="hero-overlay"></div>
+  
+  <div class="hero-content active">
+    <h1 class="hero-title">Timeless Elegance</h1>
+    <p class="hero-subtitle">Discover Cartier's exquisite collection of luxury watches and jewelry, crafted with precision and passion for over a century.</p>
+    <a href="#Shop" class="hero-btn">Explore Collections</a>
+  </div>
+  
+  <button class="slider-arrow prev">
+    <i class="fas fa-chevron-left"></i>
+  </button>
+  <button class="slider-arrow next">
+    <i class="fas fa-chevron-right"></i>
+  </button>
+  
+  <div class="slider-nav">
+    <div class="slider-dot active"></div>
+    <div class="slider-dot"></div>
+    <div class="slider-dot"></div>
+  </div>
+</section>
+
+<!-- Shop Section with Cards -->
+<section class="container my-5 content-overlay" id="Shop">
+  <h2 class="section-title">Iconic Collections</h2>
+  <div class="row gy-5">
+
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="card shadow-sm">
+        <img src="pic1 (7).jpeg" class="card-img-top" alt="Cartier Panthère">
+        <div class="card-body">
+          <h5 class="card-title">Cartier Panthère</h5>
+          <p class="card-text">An iconic ladies' watch with timeless gold details, embodying grace and strength.</p>
+          <div class="product-price">$4,250</div>
+          <div class="mb-3">
+            <i class="fa-solid fa-star" style="color: gold;"></i>
+            <i class="fa-solid fa-star" style="color: gold;"></i>
+            <i class="fa-solid fa-star" style="color: gold;"></i>
+            <i class="fa-solid fa-star" style="color: gold;"></i>
+            <i class="fa-solid fa-star" style="color: gold;"></i>
+          </div>
+          
+          <div class="quantity-controls">
+            <button class="quantity-btn minus" data-product="Cartier Panthère">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" data-product="Cartier Panthère">
+            <button class="quantity-btn plus" data-product="Cartier Panthère">+</button>
+          </div>
+          
+          <button class="add-to-cart-btn" data-product="Cartier Panthère" data-price="4250" data-image="pic1 (7).jpeg">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="card shadow-sm">
+        <img src="pic1 (2).jpeg" class="card-img-top" alt="Cartier Tank">
+        <div class="card-body">
+          <h5 class="card-title">Cartier Tank</h5>
+          <p class="card-text">A rectangular masterpiece, designed for modern women with timeless elegance.</p>
+          <div class="product-price">$3,890</div>
+          <div class="mb-3">
+            <i class="fa-solid fa-star" style="color: gold;"></i>
+            <i class="fa-solid fa-star" style="color: gold;"></i>
+            <i class="fa-solid fa-star" style="color: gold;"></i>
+            <i class="fa-solid fa-star" style="color: gold;"></i>
+            <i class="fa-solid fa-star-half" style="color: gold;"></i>
+          </div>
+          
+          <div class="quantity-controls">
+            <button class="quantity-btn minus" data-product="Cartier Tank">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" data-product="Cartier Tank">
+            <button class="quantity-btn plus" data-product="Cartier Tank">+</button>
+          </div>
+          
+          <button class="add-to-cart-btn" data-product="Cartier Tank" data-price="3890" data-image="pic1 (2).jpeg">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="card shadow-sm">
+        <img src="pic1 (16).jpeg" class="card-img-top" alt="Cartier Ballon Bleu">
+        <div class="card-body">
+          <h5 class="card-title">Cartier Ballon Bleu</h5>
+          <p class="card-text">A graceful round case with signature sapphire crown, blending tradition and innovation.</p>
+          <div class="product-price">$5,200</div>
+          <div class="mb-3">
+            <i class="fa-solid fa-star" style="color: gold;"></i>
+            <i class="fa-solid fa-star" style="color: gold;"></i>
+            <i class="fa-solid fa-star" style="color: gold;"></i>
+            <i class="fa-solid fa-star" style="color: gold;"></i>
+            <i class="fa-regular fa-star" style="color: gold;"></i>
+          </div>
+          
+          <div class="quantity-controls">
+            <button class="quantity-btn minus" data-product="Cartier Ballon Bleu">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" data-product="Cartier Ballon Bleu">
+            <button class="quantity-btn plus" data-product="Cartier Ballon Bleu">+</button>
+          </div>
+          
+          <button class="add-to-cart-btn" data-product="Cartier Ballon Bleu" data-price="5200" data-image="pic1 (16).jpeg">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional Cards -->
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="card shadow-sm">
+        <img src="pic1 (15).jpeg" class="card-img-top" alt="Cartier Santos">
+        <div class="card-body">
+          <h5 class="card-title">Cartier Santos</h5>
+          <p class="card-text">The first wristwatch created for aviator Alberto Santos-Dumont, featuring a square case.</p>
+          <div class="product-price">$6,500</div>
+          <div class="mb-3">
+            <i class="fa-solid fa-star" style="color: gold;"></i>
+            <i class="fa-solid fa-star" style="color: gold;"></i>
+            <i class="fa-solid fa-star" style="color: gold;"></i>
+            <i class="fa-solid fa-star" style="color: gold;"></i>
+            <i class="fa-solid fa-star" style="color: gold;"></i>
+          </div>
+          
+          <div class="quantity-controls">
+            <button class="quantity-btn minus" data-product="Cartier Santos">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" data-product="Cartier Santos">
+            <button class="quantity-btn plus" data-product="Cartier Santos">+</button>
+          </div>
+          
+          <button class="add-to-cart-btn" data-product="Cartier Santos" data-price="6500" data-image="pic1 (15).jpeg">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="card shadow-sm">
+        <img src="pic1 (14).jpeg" class="card-img-top" alt="Cartier Trinity">
+        <div class="card-body">
+          <h5 class="card-title">Cartier Trinity</h5>
+          <p class="card-text">Three interwoven rings in pink, white, and yellow gold symbolizing love, fidelity, and friendship.</p>
+          <div class="product-price">$2,850</div>
+          <div class="mb-3">
+            <i class="fa-solid fa-star" style="color: gold;"></i>
+            <i class="fa-solid fa-star" style="color: gold;"></i>
+            <i class="fa-solid fa-star" style="color: gold;"></i>
+            <i class="fa-solid fa-star" style="color: gold;"></i>
+            <i class="fa-solid fa-star-half" style="color: gold;"></i>
+          </div>
+          
+          <div class="quantity-controls">
+            <button class="quantity-btn minus" data-product="Cartier Trinity">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" data-product="Cartier Trinity">
+            <button class="quantity-btn plus" data-product="Cartier Trinity">+</button>
+          </div>
+          
+          <button class="add-to-cart-btn" data-product="Cartier Trinity" data-price="2850" data-image="pic1 (14).jpeg">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="card shadow-sm">
+        <img src="pic1 (13).jpeg" class="card-img-top" alt="Cartier Love">
+        <div class="card-body">
+          <h5 class="card-title">Cartier Love</h5>
+          <p class="card-text">The iconic Love bracelet, a symbol of eternal connection, requiring a special screwdriver to fasten.</p>
+          <div class="product-price">$7,200</div>
+          <div class="mb-3">
+            <i class="fa-solid fa-star" style="color: gold;"></i>
+            <i class="fa-solid fa-star" style="color: gold;"></i>
+            <i class="fa-solid fa-star" style="color: gold;"></i>
+            <i class="fa-solid fa-star" style="color: gold;"></i>
+            <i class="fa-regular fa-star" style="color: gold;"></i>
+          </div>
+          
+          <div class="quantity-controls">
+            <button class="quantity-btn minus" data-product="Cartier Love">-</button>
+            <input type="number" class="quantity-input" value="1" min="1" data-product="Cartier Love">
+            <button class="quantity-btn plus" data-product="Cartier Love">+</button>
+          </div>
+          
+          <button class="add-to-cart-btn" data-product="Cartier Love" data-price="7200" data-image="pic1 (13).jpeg">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Categories -->
+<section class="container my-5 content-overlay">
+  <h2 class="section-title">Explore Our World</h2>
+  <div class="row text-center">
+    <div class="col-md-4 mb-4">
+      <img src="pic1 (9).jpeg" class="img-fluid rounded shadow category-img" alt="Cartier Perfume">
+      <p class="mt-3">Cartier Perfume</p>
+    </div>
+    <div class="col-md-4 mb-4">
+      <img src="pic1 (10).jpeg" class="img-fluid rounded shadow category-img" alt="Ballon Bleu De Cartier">
+      <p class="mt-3">Cartier Panthère</p>
+    </div>
+    <div class="col-md-4 mb-4">
+      <img src="pic1 (11).jpeg" class="img-fluid rounded shadow category-img" alt="Cartier Ballon Bleu">
+      <p class="mt-3">Cartier </p>
+    </div>
+  </div>
+</section>
+
+<!-- Warranty Section -->
+<section class="warranty-section content-overlay">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="pic1 (3).jpeg" class="img-fluid rounded shadow floating" alt="Cartier Warranty">
+      </div>
+      <div class="col-md-6">
+        <h3>Cartier International Guarantee</h3>
+        <p>Each Cartier timepiece is crafted with the highest standards and comes with an international warranty, ensuring excellence and peace of mind.</p>
+        <ul>
+          <li>Five-Year Comprehensive Coverage</li>
+          <li>Worldwide Service Network</li>
+          <li>Expert Care by Cartier Watchmakers</li>
+          <li>Authenticity & Craftsmanship Guarantee</li>
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="container my-5 content-overlay" id="About">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <h2 class="text-danger">Cartier Heritage</h2>
+      <p>For over 170 years, Cartier has been a symbol of luxury and refinement. Founded in Paris in 1847 by Louis-François Cartier, the Maison has established itself as the "Jeweler of Kings and the King of Jewelers."</p>
+      <p>Our ladies' watches reflect timeless design, elegance, and innovation, crafted for women who appreciate sophistication and enduring style.</p>
+      <p>Each Cartier creation tells a story of excellence, from the iconic Tank watch inspired by military vehicles to the graceful Ballon Bleu with its distinctive sapphire cabochon crown.</p>
+    </div>
+    <div class="col-md-6">
+      <img src="pic1 (17).jpeg" class="img-fluid rounded shadow">
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="container my-5 content-overlay">
+  <h2 class="section-title">Client Testimonials</h2>
+  <div class="row text-center">
+    <div class="col-md-4 mb-4">
+      <div class="card p-3 shadow-sm testimonial-card">
+        <p>"The craftsmanship is stunning. My Cartier watch is not just a timepiece, it's a true treasure that I'll cherish forever."</p>
+        <strong>- Emma L.</strong>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card p-3 shadow-sm testimonial-card">
+        <p>"Elegant, timeless, and worth every penny. The attention to detail in every Cartier creation is simply remarkable."</p>
+        <strong>- Sophia R.</strong>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card p-3 shadow-sm testimonial-card">
+        <p>"A statement piece that draws compliments everywhere I go. Cartier embodies luxury in its purest form."</p>
+        <strong>- Olivia M.</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact-section content-overlay" id="Contact">
+  <div class="container">
+    <h3 class="text-center mb-4 section-title">Contact Our Specialists</h3>
+    <div class="row">
+      <div class="col-md-4">
+        <h5>Visit Our Boutiques</h5>
+        <p><i class="fa-solid fa-location-dot me-2"></i>Paris, France | New York, USA | Tokyo, Japan</p>
+        <p><i class="fa-solid fa-envelope me-2"></i>contact@cartier.com</p>
+        <p><i class="fa-solid fa-phone me-2"></i>+33 1 23 45 67 89</p>
+        <p><i class="fa-solid fa-clock me-2"></i>Mon - Sat: 10AM - 7PM</p>
+      </div>
+      <div class="col-md-8">
+        <form id="contactForm" novalidate>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="nameInput" placeholder="Your Name" required>
+            <div class="invalid-feedback">
+              Please provide your name.
+            </div>
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" id="emailInput" placeholder="Your Email" required>
+            <div class="invalid-feedback">
+              Please provide a valid email address.
+            </div>
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" id="messageInput" rows="4" placeholder="Your Message" required></textarea>
+            <div class="invalid-feedback">
+              Please provide a message.
+            </div>
+          </div>
+          <button type="submit" class="btn btn-light">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="content-overlay">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <h5>Collections</h5>
+        <p>Panthère | Tank | Ballon Bleu | Santos | Trinity</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h5>Services</h5>
+        <p>Store Locator | Warranty | Customer Service | Repairs</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h5>Follow Cartier</h5>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="bg-light">
+    <div class="text-center py-3">
+      <p class="small">&copy; 2023 Cartier. All Rights Reserved. | Luxury Since 1847</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Shopping Cart Functionality
+    let cart = [];
+    const cartSidebar = document.getElementById('cart-sidebar');
+    const cartOverlay = document.getElementById('cart-overlay');
+    const cartToggle = document.getElementById('cart-toggle');
+    const closeCart = document.getElementById('close-cart');
+    const cartItems = document.getElementById('cart-items');
+    const cartTotal = document.getElementById('cart-total');
+    const totalAmount = document.getElementById('total-amount');
+    const checkoutBtn = document.getElementById('checkout-btn');
+    const continueShoppingBtn = document.getElementById('continue-shopping');
+    const cartCount = document.getElementById('cart-count');
+
+    // Toggle Cart Sidebar
+    cartToggle.addEventListener('click', () => {
+      cartSidebar.classList.add('open');
+      cartOverlay.classList.add('active');
+    });
+
+    closeCart.addEventListener('click', () => {
+      cartSidebar.classList.remove('open');
+      cartOverlay.classList.remove('active');
+    });
+
+    cartOverlay.addEventListener('click', () => {
+      cartSidebar.classList.remove('open');
+      cartOverlay.classList.remove('active');
+    });
+
+    continueShoppingBtn.addEventListener('click', () => {
+      cartSidebar.classList.remove('open');
+      cartOverlay.classList.remove('active');
+    });
+
+    // Media Slider Functionality
+    const mediaSlides = document.querySelectorAll('.media-slide');
+    const dots = document.querySelectorAll('.slider-dot');
+    const prevBtn = document.querySelector('.slider-arrow.prev');
+    const nextBtn = document.querySelector('.slider-arrow.next');
+    let currentMedia = 0;
+    
+    function showMedia(n) {
+      // Hide all media
+      mediaSlides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+      
+      // Show current media
+      currentMedia = (n + mediaSlides.length) % mediaSlides.length;
+      mediaSlides[currentMedia].classList.add('active');
+      dots[currentMedia].classList.add('active');
+    }
+    
+    // Next/previous controls
+    nextBtn.addEventListener('click', () => {
+      showMedia(currentMedia + 1);
+    });
+    
+    prevBtn.addEventListener('click', () => {
+      showMedia(currentMedia - 1);
+    });
+    
+    // Dot controls
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        showMedia(index);
+      });
+    });
+    
+    // Auto slide
+    setInterval(() => {
+      showMedia(currentMedia + 1);
+    }, 6000);
+
+    // Scroll progress bar
+    window.onscroll = function() {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById("progressBar").style.width = scrolled + "%";
+      
+      // Navbar shadow on scroll
+      if (window.scrollY > 50) {
+        document.getElementById('navbar').classList.add('scrolled');
+      } else {
+        document.getElementById('navbar').classList.remove('scrolled');
+      }
+      
+      // Animate elements on scroll
+      animateOnScroll();
+    };
+    
+    // Function to animate elements when they come into view
+    function animateOnScroll() {
+      const elements = document.querySelectorAll('.section-title, .card, .category-img, .testimonial-card');
+      
+      elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 150;
+        
+        if (elementTop < window.innerHeight - elementVisible) {
+          element.classList.add('visible');
+        }
+      });
+    }
+    
+    // Initial call to check elements in view on page load
+    animateOnScroll();
+    
+    // Fix Home link to navigate to top of page
+    document.getElementById('homeLink').addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Custom Alert Function
+    function showAlert(message, type = 'success') {
+      const alertContainer = document.getElementById('alertContainer');
+      
+      // Create alert element
+      const alertEl = document.createElement('div');
+      alertEl.className = `custom-alert alert alert-${type} alert-dismissible fade show`;
+      alertEl.innerHTML = `
+        <div class="d-flex align-items-center">
+          <i class="fas ${type === 'success' ? 'fa-check-circle' : type === 'warning' ? 'fa-exclamation-triangle' : 'fa-info-circle'} me-2"></i>
+          <span class="alert-message">${message}</span>
+          <button type="button" class="alert-close ms-auto" data-bs-dismiss="alert">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      `;
+      
+      // Add to container
+      alertContainer.appendChild(alertEl);
+      
+      // Show with animation
+      setTimeout(() => {
+        alertEl.style.display = 'block';
+      }, 10);
+      
+      // Auto remove after 5 seconds
+      setTimeout(() => {
+        if (alertEl.parentNode) {
+          alertEl.style.display = 'none';
+          setTimeout(() => {
+            if (alertEl.parentNode) {
+              alertContainer.removeChild(alertEl);
+            }
+          }, 500);
+        }
+      }, 5000);
+    }
+
+    // Add to Cart Functionality
+    document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+      button.addEventListener('click', function() {
+        const productName = this.getAttribute('data-product');
+        const productPrice = parseFloat(this.getAttribute('data-price'));
+        const productImage = this.getAttribute('data-image');
+        const quantityInput = document.querySelector(`.quantity-input[data-product="${productName}"]`);
+        const quantity = parseInt(quantityInput.value);
+        
+        // Check if product already in cart
+        const existingItem = cart.find(item => item.name === productName);
+        
+        if (existingItem) {
+          existingItem.quantity += quantity;
+        } else {
+          cart.push({
+            name: productName,
+            price: productPrice,
+            image: productImage,
+            quantity: quantity
+          });
+        }
+        
+        updateCart();
+        showAlert(`${productName} added to cart successfully!`);
+        
+        // Reset quantity to 1
+        quantityInput.value = 1;
+      });
+    });
+
+    // Quantity Controls
+    document.querySelectorAll('.quantity-btn.plus').forEach(button => {
+      button.addEventListener('click', function() {
+        const productName = this.getAttribute('data-product');
+        const quantityInput = document.querySelector(`.quantity-input[data-product="${productName}"]`);
+        quantityInput.value = parseInt(quantityInput.value) + 1;
+      });
+    });
+
+    document.querySelectorAll('.quantity-btn.minus').forEach(button => {
+      button.addEventListener('click', function() {
+        const productName = this.getAttribute('data-product');
+        const quantityInput = document.querySelector(`.quantity-input[data-product="${productName}"]`);
+        if (parseInt(quantityInput.value) > 1) {
+          quantityInput.value = parseInt(quantityInput.value) - 1;
+        }
+      });
+    });
+
+    // Update Cart Display
+    function updateCart() {
+      // Update cart count
+      const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+      cartCount.textContent = totalItems;
+      
+      // Update cart items
+      if (cart.length === 0) {
+        cartItems.innerHTML = `
+          <div class="empty-cart">
+            <i class="fas fa-shopping-cart"></i>
+            <p>Your cart is empty</p>
+          </div>
+        `;
+        cartTotal.style.display = 'none';
+        checkoutBtn.style.display = 'none';
+        continueShoppingBtn.style.display = 'none';
+      } else {
+        cartItems.innerHTML = '';
+        let total = 0;
+        
+        cart.forEach((item, index) => {
+          const itemTotal = item.price * item.quantity;
+          total += itemTotal;
+          
+          const cartItem = document.createElement('div');
+          cartItem.className = 'cart-item';
+          cartItem.innerHTML = `
+            <img src="${item.image}" alt="${item.name}" class="cart-item-img">
+            <div class="cart-item-details">
+              <div class="cart-item-title">${item.name}</div>
+              <div class="cart-item-price">$${item.price.toFixed(2)}</div>
+              <div class="cart-item-quantity">
+                <button class="cart-quantity-btn minus" data-index="${index}">-</button>
+                <input type="number" class="cart-quantity-input" value="${item.quantity}" min="1" data-index="${index}">
+                <button class="cart-quantity-btn plus" data-index="${index}">+</button>
+              </div>
+            </div>
+            <button class="remove-item" data-index="${index}">
+              <i class="fas fa-times"></i>
+            </button>
+          `;
+          cartItems.appendChild(cartItem);
+        });
+        
+        // Add event listeners to remove buttons
+        document.querySelectorAll('.remove-item').forEach(button => {
+          button.addEventListener('click', function() {
+            const index = parseInt(this.getAttribute('data-index'));
+            const removedItem = cart[index];
+            cart.splice(index, 1);
+            updateCart();
+            showAlert(`${removedItem.name} removed from cart`, 'info');
+          });
+        });
+        
+        // Add event listeners to quantity buttons in cart
+        document.querySelectorAll('.cart-quantity-btn.plus').forEach(button => {
+          button.addEventListener('click', function() {
+            const index = parseInt(this.getAttribute('data-index'));
+            cart[index].quantity += 1;
+            updateCart();
+          });
+        });
+        
+        document.querySelectorAll('.cart-quantity-btn.minus').forEach(button => {
+          button.addEventListener('click', function() {
+            const index = parseInt(this.getAttribute('data-index'));
+            if (cart[index].quantity > 1) {
+              cart[index].quantity -= 1;
+              updateCart();
+            }
+          });
+        });
+        
+        // Update total
+        totalAmount.textContent = total.toFixed(2);
+        cartTotal.style.display = 'block';
+        checkoutBtn.style.display = 'block';
+        continueShoppingBtn.style.display = 'block';
+      }
+    }
+
+    // Checkout Button
+    checkoutBtn.addEventListener('click', () => {
+      if (cart.length > 0) {
+        showAlert('Proceeding to checkout! Thank you for your order.', 'success');
+        // In a real application, you would redirect to a checkout page
+        // window.location.href = 'checkout.html';
+        
+        // For demo purposes, we'll just clear the cart
+        setTimeout(() => {
+          cart = [];
+          updateCart();
+          cartSidebar.classList.remove('open');
+          cartOverlay.classList.remove('active');
+        }, 2000);
+      }
+    });
+
+    // Learn More button alert
+    document.getElementById('learnMoreBtn').addEventListener('click', function(e) {
+      e.preventDefault();
+      showAlert('Learn more about Cartier\'s comprehensive international warranty and service network', 'info');
+    });
+    
+    // Contact form validation
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form elements
+      const nameInput = document.getElementById('nameInput');
+      const emailInput = document.getElementById('emailInput');
+      const messageInput = document.getElementById('messageInput');
+      
+      // Reset previous validation states
+      nameInput.classList.remove('is-invalid', 'is-valid');
+      emailInput.classList.remove('is-invalid', 'is-valid');
+      messageInput.classList.remove('is-invalid', 'is-valid');
+      
+      let isValid = true;
+      
+      // Validate name
+      if (nameInput.value.trim() === '') {
+        nameInput.classList.add('is-invalid');
+        isValid = false;
+      } else {
+        nameInput.classList.add('is-valid');
+      }
+      
+      // Validate email
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(emailInput.value.trim())) {
+        emailInput.classList.add('is-invalid');
+        isValid = false;
+      } else {
+        emailInput.classList.add('is-valid');
+      }
+      
+      // Validate message
+      if (messageInput.value.trim() === '') {
+        messageInput.classList.add('is-invalid');
+        isValid = false;
+      } else {
+        messageInput.classList.add('is-valid');
+      }
+      
+      // If form is valid
+      if (isValid) {
+        showAlert('Thank you for your message! Our Cartier specialists will contact you soon.', 'success');
+        
+        // Reset form
+        this.reset();
+        nameInput.classList.remove('is-valid');
+        emailInput.classList.remove('is-valid');
+        messageInput.classList.remove('is-valid');
+      } else {
+        showAlert('Please fill out all required fields correctly', 'warning');
+      }
+    });
+  });
+</script>
+<!-- Add this button to your HTML, just before the closing </body> tag -->
+<button id="scrollToTopBtn" class="scroll-to-top-btn">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<style>
+    .scroll-to-top-btn {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        /* background: linear-gradient(45deg, var(--cosmic-purple), var(--nebula-blue)); */
+        border: none;
+        color: rgb(0, 0, 0);
+        font-size: 1.2rem;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        transition: all 0.3s ease;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .scroll-to-top-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(250, 250, 250, 0.7);
+        background: linear-gradient(45deg, var(--nebula-blue), var(--comet));
+    }
+    
+    .scroll-to-top-btn.show {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .scroll-to-top-btn:active {
+        transform: translateY(-1px);
+    }
+</style>
+
+<script>
+    // Scroll to top button functionality
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.add('show');
+        } else {
+            scrollToTopBtn.classList.remove('show');
+        }
+    });
+    
+    scrollToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+</body>
+</html>

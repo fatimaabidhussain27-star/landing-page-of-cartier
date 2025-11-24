@@ -1,0 +1,65 @@
+User-agent: *
+Allow: /
+Disallow: /cart
+Disallow: /checkout
+Disallow: /admin
+Disallow: /private
+Disallow: /tmp
+Disallow: /cgi-bin
+
+# Sitemap location
+Sitemap: https://www.yourcartierdomain.com/sitemap.xml
+
+# Allow major search engine crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Allow social media crawlers
+User-agent: FacebookExternalHit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+# Allow image crawlers
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot-Image
+Allow: /
+
+# Crawl delay (optional - adjust based on server capacity)
+Crawl-delay: 1
+
+# Specific disallow rules for sensitive areas
+Disallow: /*.php$
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /search
+Disallow: /filter
+Disallow: /sort
+
+# Allow product images and important assets
+Allow: /images/
+Allow: /assets/
+Allow: /css/
+Allow: /js/
+
+# Product pages should be indexed
+Allow: /collections/
+Allow: /products/
+
+# Contact and about pages should be indexed
+Allow: /contact
+Allow: /about
+Allow: /heritage
+
+# Blog and news sections (if applicable)
+Allow: /blog/
+Allow: /news/
